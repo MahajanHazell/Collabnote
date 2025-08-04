@@ -1,4 +1,4 @@
-const ML_API_URL = 'http://127.0.0.1:8000';
+const ML_API_URL = process.env.REACT_APP_ML_API_URL || 'http://127.0.0.1:8000';
 
 export async function getSummary(text) {
   const res = await fetch(`${ML_API_URL}/summarize`, {

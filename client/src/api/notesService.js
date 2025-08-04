@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5001/api/notes';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api/notes';
 
 export async function fetchNotes() {
   const res = await fetch(API_URL);
